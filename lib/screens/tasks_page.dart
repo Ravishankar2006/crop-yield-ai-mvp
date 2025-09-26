@@ -510,7 +510,7 @@ class _TasksPageState extends State<TasksPage> with TickerProviderStateMixin {
             return Transform.translate(
               offset: Offset(30 * (1 - animation.value), 0),
               child: Opacity(
-                opacity: animation.value,
+                opacity: animation.value.clamp(0.0, 1.0),
                 child: Container(
                   margin: EdgeInsets.only(bottom: 12),
                   child: _buildGlassmorphicTaskCard(tasks[index], index),
@@ -878,3 +878,4 @@ class _TasksPageState extends State<TasksPage> with TickerProviderStateMixin {
     );
   }
 }
+
