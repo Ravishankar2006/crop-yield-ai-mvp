@@ -349,7 +349,7 @@ class _CropInsightsPageState extends State<CropInsightsPage>
             return Transform.translate(
               offset: Offset(0, 30 * (1 - animation.value)),
               child: Opacity(
-                opacity: animation.value,
+                opacity: animation.value.clamp(0.0, 1.0),
                 child: Container(
                   margin: EdgeInsets.only(bottom: 16),
                   child: _buildMorphingCropCard(filteredCrops[index]),
