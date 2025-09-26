@@ -493,3 +493,4 @@ class _FinancialPageState extends State<FinancialPage> with TickerProviderStateM
     );
   }
 }
+
